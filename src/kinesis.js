@@ -5,7 +5,7 @@
  * var kinesis = new(require("./kinesis"))(aws);
  */
 
-var node_uuid = require("node-uuid");
+const uuidV4 = require('uuid/v4');
 var _ = require("lodash");
 
 /**
@@ -78,7 +78,7 @@ Kinesis.prototype.mergeShards = function(params, callback) {
  */
 Kinesis.prototype.putRecord = function(streamName, params, partitionKey, callback) {
     if (_.isUndefined(partitionKey) || _.isNull(partitionKey)) {
-        partitionKey = node_uuid.v4();
+        partitionKey = uuidV4();
     }
     var kinesisParams = {
         Data: params,
