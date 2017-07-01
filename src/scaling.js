@@ -30,9 +30,11 @@ module.exports = scaling;
 
 function scaling(options) {
 
+    console.log("input params ", options);
+
     var defaults = require("./defaults");
 
-    var config = _.extend(defaults, options);
+    var config = _.extend(options, defaults);
 
     console.log("initialize kinesis scaling with ", config);
 
