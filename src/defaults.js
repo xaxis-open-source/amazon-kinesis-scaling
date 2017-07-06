@@ -5,5 +5,5 @@ module.exports = {
     splitNextInterval: 1,
     mergeNextInterval: 1,
     autoScaleInterval: 1,
-    maxShard: 50
+    maxShard: 500
 };
