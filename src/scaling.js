@@ -34,7 +34,7 @@ function scaling(options) {
 
     var defaults = require("./defaults");
 
-    var config = _.extend(options, defaults);
+    var config = _.extend({}, defaults, options);
 
     console.log("initialize kinesis scaling with ", config);
 
