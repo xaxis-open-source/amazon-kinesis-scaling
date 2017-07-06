@@ -36,8 +36,9 @@ function success(data){
 
 It accept following parameters.
 All interval are specified in minutes.
+
 | Name         | Description           | default value | required/optional  |
-| ------------- |-------------| -----| ---------------- |
+| ------------- | ------------- | ----- | ---------------- |
 | accessKeyId      | access key of aws | none | required |
 | secretAccessKey     | secret key of aws | none  |   required |
 | region | region of aws kinesis stream | none |   required |
