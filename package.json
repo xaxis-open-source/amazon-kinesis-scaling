@@ -1,6 +1,6 @@
-{
+ {
   "name": "@xaxis-open-source/amazon-kinesis-scaling",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "auto scaling of kinesis shards",
   "main": "index.js",
   "scripts": {
