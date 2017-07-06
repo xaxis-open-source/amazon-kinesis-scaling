@@ -36,8 +36,6 @@ function scaling(options) {
 
     var config = _.extend({}, defaults, options);
 
-    console.log("initialize kinesis scaling with ", config);
-
     this.config = config;
 
 }
@@ -56,6 +54,11 @@ scaling.prototype.start = function(fnError, fnSuccess) {
         });
         return error;
     }
+
+    var configPrint = _.clone(this.config);//we print this object to console after removing accessKey and secretKey
+    configPrint.accessKeyId = "accessKeyId";
+    configPrint.secretAccessKey = "secretAccessKey";
+    console.log("initialize kinesis scaling with ", configPrint);
 
     var aws = new require("./aws")(this.config);
     var kinesis = new(require("./kinesis"))(aws);
