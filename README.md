@@ -43,7 +43,7 @@ All interval are specified in minutes.
 | secretAccessKey     | secret key of aws | none  |   required |
 | region | region of aws kinesis stream | none |   required |
 | streamName | name of kinesis stream | none | required |
-| maxShard | max number of shards, do not create shard if current number of shards reaches this value | 500 | optional |
+| maxShard | max number of shards, do not create shard if current number of shards reaches this value | 50 | optional |
 | shardLimit | limit after which shard need to be split | 800 | optional |
 |autoScaleInterval | it check stream traffic every minute specified by this propery | 1 | optional |
 |scalingSplitDuration| shard will only be split if its traffic exceed shardLimit atleast number of minutes defined by this property. e.g. if this value is 3 then shard will only be split when traffic on shard exceed shardLimit in 3 times in last 3 minutes.  | 1 | optional |
